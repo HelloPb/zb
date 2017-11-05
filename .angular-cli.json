@@ -19,7 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "../node_modules/bootstrap/dist/css/bootstrap-grid.min.css",
+        "styles.css",
+        "unicorn-app-theme.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

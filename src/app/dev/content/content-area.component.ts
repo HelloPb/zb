@@ -15,22 +15,25 @@ export class ContentAreaComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private router: Router,
-    private breakpointObserver: BreakpointObserver) { }
+    private router: Router) { }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-    if (actual('width', 'px') > 1200) {
+
+    if (actual('width', 'px') >= 1200) {
+
       this.navmode = 'side';
       this.navopened = true;
+
     } else {
+
       this.navmode = 'over';
       this.navopened = false;
+
     }
   }
 
-  ngOnInit() { 
+  ngOnInit() {
     this.onResize(null);
   }
 }
-
