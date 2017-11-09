@@ -1,3 +1,4 @@
+import { AppResponsiveService } from '../../../app-responsive.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private rsv: AppResponsiveService
+  ) { }
 
   ngOnInit() {
   }
-
 }

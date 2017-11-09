@@ -1,3 +1,10 @@
-<app-home-sections>
-</app-home-sections>
-<app-home-overview></app-home-overview>
+<mat-sidenav-container class="zb-sidenav-container">
+  <mat-sidenav #sidenav mode="{{rsv.mode}}" opened="{{rsv.opened}}">
+    <div>
+      <app-home-sections></app-home-sections>
+    </div>
+  </mat-sidenav>
+  <div class="w-100" (window:resize)="rsv.setSideNav(600)">
+    <app-home-overview></app-home-overview>
+  </div>
+</mat-sidenav-container>

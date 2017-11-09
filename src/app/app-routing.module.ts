@@ -12,7 +12,8 @@ const route: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
+    outlet: 'popup'
   },
   {
     path: 'register',
@@ -35,7 +36,7 @@ const route: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(route, { useHash: true })
+    RouterModule.forRoot(route, { useHash: true, enableTracing: true })
   ],
   exports: [RouterModule]
 })

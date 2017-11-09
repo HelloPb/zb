@@ -1,2 +1,10 @@
-<app-product-search-criteria></app-product-search-criteria>
-<app-product-search-result></app-product-search-result>
+<mat-sidenav-container class="zb-sidenav-container">
+  <mat-sidenav #sidenav mode="{{rsv.mode}}" opened="{{rsv.opened}}">
+    <div>
+      <app-product-search-criteria></app-product-search-criteria>
+    </div>
+  </mat-sidenav>
+  <div class="w-100" (window:resize)="rsv.setSideNav(600)">
+    <app-product-search-result></app-product-search-result>
+  </div>
+</mat-sidenav-container>

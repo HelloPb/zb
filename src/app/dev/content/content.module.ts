@@ -10,7 +10,6 @@ import { ContentAreaComponent } from './content-area.component';
   imports: [
     CommonModule,
     AngularMaterialDesignModule,
-    HomeModule,
     MenuModule,
     ContentRoutingModule
   ],

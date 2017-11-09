@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LeftMenuComponent } from './left-menu/left-menu.component';
 
 @NgModule({
   imports: [
@@ -10,7 +11,7 @@ import { CommonModule } from '@angular/common';
     AngularMaterialDesignModule,
     RouterModule
   ],
-  declarations: [TopMenuComponent],
-  exports: [TopMenuComponent]
+  declarations: [TopMenuComponent, LeftMenuComponent],
+  exports: [TopMenuComponent, LeftMenuComponent]
 })
 export class MenuModule { }

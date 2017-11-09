@@ -1,3 +1,19 @@
- .dudime-sidenav-content {
-   display: flex;
- }
+ .zb-sidenav-container {
+  width: auto; 
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.zb-sidenav-container mat-sidenav {
+  width: 200px;
+}
+
+.zb-sidenav-container .mat-sidenav-content,
+.zb-sidenav-container mat-sidenav {
+  display: flex;
+  overflow: visible;
+}
+
+.zb-scrolling-content {
+  overflow: auto;
+  height: 100%;
+}

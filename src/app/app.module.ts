@@ -1,3 +1,4 @@
+import { AppResponsiveService } from './app-responsive.service';
 import { AngularMaterialDesignModule } from './common/angular-material-design/angular-material-design.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ValidationService } from './dev/content/features/shared/services/validation/validation.service';
@@ -22,8 +23,6 @@ import { RegisterComponent } from './dev/register/register.component';
 import { CanActivateGuardService } from './dev/content/features/shared/services/auth/can-activate-guard/can-activate-guard.service';
 import { PageNotFoundComponent } from './dev/page-not-found/page-not-found.component';
 import { LogoutComponent } from './dev/logout/logout.component';
-import { BreakpointObserver } from '@angular/cdk/layout';
-import { MediaMatcher } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -50,8 +49,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
     ProfileUsersResolverService,
     ProfileUsersService,
     ValidationService,
-    BreakpointObserver,
-    MediaMatcher
+    AppResponsiveService
   ],
   bootstrap: [AppComponent]
 })

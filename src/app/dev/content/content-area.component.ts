@@ -1,39 +1,24 @@
+import { AppResponsiveService } from '../../app-responsive.service';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Component, HostListener, OnInit } from '@angular/core';
-import * as actual from 'actual';
+import { Component, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-content-area',
   templateUrl: './content-area.component.html',
-  styleUrls: ['./content-area.component.css']
+  styleUrls: ['./content-area.component.css'],
+  encapsulation: ViewEncapsulation.None,
+  preserveWhitespaces: false,
 })
 export class ContentAreaComponent implements OnInit {
 
-  navmode = 'over';
-  navopened = false;
-
   constructor(
     private route: ActivatedRoute,
-    private router: Router) { }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-
-    if (actual('width', 'px') >= 1200) {
-
-      this.navmode = 'side';
-      this.navopened = true;
-
-    } else {
-
-      this.navmode = 'over';
-      this.navopened = false;
-
-    }
-  }
+    private router: Router,
+    private rsv: AppResponsiveService
+  ) { }
 
   ngOnInit() {
-    this.onResize(null);
+    this.rsv.setSideNav(1200);
   }
 }

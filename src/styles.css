@@ -1,4 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
-/* @import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; */
-/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+.zb-card {
+  width: 280px;
+  padding: 10px!important;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.zb-card > mat-card-content {
+  max-height: 200px; 
+  overflow: auto;
+}
+
+.pb-5 {
+  padding-bottom: 5px;
+}
+.p-5 {
+  padding: 5px;
+}
+.p-10 {
+  padding: 10px;
+}
+.p-15 {
+  padding: 15px;
+}
+.p-15i {
+  padding: 15px!important;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
+.mr-5 {
+  margin-right: 5px;
+}
+.m-5 {
+  margin: 5px;
+}
+.mx-auto {
+  margin: 0 auto;
+}
+.w-100 {
+  width: 100%;
+}
+.d-flex {
+  display: flex;
+}
+.float-right {
+  float: right
+}

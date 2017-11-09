@@ -12,7 +12,11 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: HomeComponent
+        redirectTo: 'home'
+      },
+      {
+        path: 'home',
+        loadChildren: 'app/dev/content/home/home.module#HomeModule'
       },
       {
         path: 'users',
