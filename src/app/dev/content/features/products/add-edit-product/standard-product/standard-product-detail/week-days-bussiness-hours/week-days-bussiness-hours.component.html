@@ -1,0 +1,60 @@
+<form [formGroup]="formGroup">
+  <mat-accordion class="week-headers-align">
+    <mat-expansion-panel hideToggle="true">
+      <mat-expansion-panel-header>
+        <div class="row no-gutters w-100">
+          <div class="col col-auto w-30p">
+            {{day.name}}
+          </div>
+          <div class="col ta-center">
+            Add/Edit Hours
+          </div>
+          <div class="col col-auto">
+            <mat-icon fontSet="fa" fontIcon="fa-calendar" aria-hidden="true"></mat-icon>
+          </div>
+        </div>
+      </mat-expansion-panel-header>
+
+      <div class="ta-center">
+        <button mat-icon-button>
+          <mat-icon class="fs-22p" fontSet="fa" fontIcon="fa-plus-square-o" aria-hidden="false" (click)="addTimeRange()"></mat-icon>
+        </button>
+      </div>
+
+      <div formArrayName="xday" style="text-align: center">
+
+        <div *ngFor="let timeRange of xday.controls; let i=index" [formGroupName]="i" class="h-50p">
+
+          <div class="d-ib w-40p">
+            <mat-checkbox formControlName="id"></mat-checkbox>
+          </div>
+
+          <div class="d-ib" formGroupName="from">
+            <input class="w-15p b-n bg-transparent" formControlName="h" readonly> :
+            <input class="w-15p b-n bg-transparent" formControlName="m" readonly>
+          </div>
+
+          <div class="d-ib w-5p"> - </div>
+
+          <div class="d-ib" formGroupName="to">
+            <input class="w-15p b-n bg-transparent" formControlName="h" readonly> :
+            <input class="w-15p b-n bg-transparent" formControlName="m" readonly>
+          </div>
+
+          <div class="d-ib">
+
+            <button mat-icon-button>
+              <mat-icon class="fs-22p" fontSet="fa" fontIcon="fa-pencil-square-o" aria-hidden="false" (click)="editTimeRange(timeRange)"></mat-icon>
+            </button>
+
+            <button mat-icon-button>
+              <mat-icon class="fs-22p" fontSet="fa" fontIcon="fa-trash" aria-hidden="false" (click)="deleteTimeRange(i, xday)"></mat-icon>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </mat-expansion-panel>
+  </mat-accordion>
+</form>

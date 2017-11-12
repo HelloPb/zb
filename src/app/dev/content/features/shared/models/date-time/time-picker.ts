@@ -1,14 +1,18 @@
 export class TimePicker {
-  public hour: string;
-  public minute: string;
+  public h: string;
+  public m: string;
   constructor() {
-    this.hour = '09';
-    this.minute = '00';
+    this.h = '09';
+    this.m = '00';
   }
 }
 
-export class TimePickerRange {
-  public from: string;
-  public to: string;
+export class TimeRangePicker {
+  public from: TimePicker;
+  public to: TimePicker;
   public id: number;
+  constructor() {
+    this.from = new TimePicker();
+    this.to = new TimePicker();
+  }
 }

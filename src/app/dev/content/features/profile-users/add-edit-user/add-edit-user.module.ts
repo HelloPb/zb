@@ -1,3 +1,4 @@
+import { AngularMaterialDesignModule } from '../../../../../common/angular-material-design/angular-material-design.module';
 import { AddEditUserRoutingModule } from './add-edit-user-routing.module';
 import { AddEditUserComponent } from './add-edit-user.component';
 import { NgModule } from '@angular/core';
@@ -8,6 +9,7 @@ import { AddEditUserSettingDetailComponent } from './add-edit-user-setting-detai
 @NgModule({
   imports: [
     CommonModule,
+    AngularMaterialDesignModule,
     AddEditUserRoutingModule
   ],
   declarations: [AddEditUserComponent, AddEditUserSettingComponent, AddEditUserSettingDetailComponent]

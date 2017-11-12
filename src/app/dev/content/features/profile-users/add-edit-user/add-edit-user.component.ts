@@ -1,7 +1,8 @@
+import { AppResponsiveService } from '../../../../../app-responsive.service';
 import { YesNoDialogService } from '../../shared/services/dialog/yesno/yes-no-dialog.service';
-import { Observable } from 'rxjs/Rx';
 import { CanComponentDeactivate } from '../../shared/services/auth/can-deactivate-guard/can-deactivate-guard.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-add-edit-user',
@@ -12,7 +13,10 @@ export class AddEditUserComponent implements OnInit, CanComponentDeactivate {
 
   private edited = false;
 
-  constructor(private dialogService: YesNoDialogService) { }
+  constructor(
+    private dialogService: YesNoDialogService,
+    private rsv: AppResponsiveService
+  ) { }
 
   ngOnInit() {
   }

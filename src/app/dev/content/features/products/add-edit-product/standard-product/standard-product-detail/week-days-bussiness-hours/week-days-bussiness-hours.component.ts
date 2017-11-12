@@ -1,7 +1,13 @@
+import { StandardProductSharedMethodService } from '../standard-product-shared-method.service';
+import { Util } from '../../../../../shared/utils/util';
+import {
+  TimeRangePickerComponent,
+} from '../../../../../shared/comps/forms/date-time-picker/time-range-picker/time-range-picker.component';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { ValidationService } from '../../../../../shared/services/validation/validation.service';
 import { selector } from 'rxjs/operator/publish';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-week-days-bussiness-hours',
@@ -11,30 +17,40 @@ import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/cor
 export class WeekDaysBussinessHoursComponent implements OnInit {
 
   private formGroup: FormGroup;
-  private closeResult: string;
-  private timeRangeFormGroup: FormGroup;
   @Input() day: any;
 
   constructor(
     private formBuilder: FormBuilder,
-    private validationService: ValidationService) {
+    private shared: StandardProductSharedMethodService,
+    private validationService: ValidationService,
+    public dialog: MatDialog
+  ) {
 
     this.formGroup = this.formBuilder.group({
-      xday: this.formBuilder.array([{ id: 1, from: '09:00', to: '12:00' }]),
+      xday: this.formBuilder.array([]),
     });
   }
 
   get xday(): FormArray {
-    return this.day.data;
+    return this.formGroup.get('xday') as FormArray;
   }
 
-  private addTimeRange(content: any): void {
+  private addTimeRange(): void {
+    const fg = this.shared.timeRangeForm({ id: 1, from: { h: '09', m: '00' }, to: { h: '05', m: '00' } });
+    this.xday.push(fg);
+    this.editTimeRange(fg);
   }
 
-  private editTimeRange(fg: FormGroup, content: any) {
+  private editTimeRange(fg: FormGroup) {
 
-    this.timeRangeFormGroup = fg;
+    const dialogRef = this.dialog.open(TimeRangePickerComponent, {
+      width: '250px',
+      data: { formGroup: fg }
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 
   private deleteTimeRange(index: number, day: FormArray): void {
@@ -42,6 +58,7 @@ export class WeekDaysBussinessHoursComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.formGroup.setControl('xday', this.day.data);
   }
 
 }

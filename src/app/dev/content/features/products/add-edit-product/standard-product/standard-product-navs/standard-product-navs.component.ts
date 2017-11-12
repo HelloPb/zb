@@ -22,8 +22,6 @@ export class StandardProductNavsComponent implements OnInit {
     });
   }
 
-  // Angular Lifecycle Hooks
   ngOnInit() {
   }
-
 }

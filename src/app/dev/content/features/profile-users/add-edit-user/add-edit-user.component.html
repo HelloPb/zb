@@ -1,3 +1,10 @@
-
-<app-add-edit-user-setting></app-add-edit-user-setting>
-<app-add-edit-user-setting-detail></app-add-edit-user-setting-detail>
+<mat-sidenav-container class="zb-sidenav-container">
+  <mat-sidenav #sidenav mode="{{rsv.mode}}" opened="{{rsv.opened}}">
+    <div>
+      <app-add-edit-user-setting></app-add-edit-user-setting>
+    </div>
+  </mat-sidenav>
+  <div class="w-100" (window:resize)="rsv.setSideNav(600)">
+    <app-add-edit-user-setting-detail></app-add-edit-user-setting-detail>
+  </div>
+</mat-sidenav-container>
