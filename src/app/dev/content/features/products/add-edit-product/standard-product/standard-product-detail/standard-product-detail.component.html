@@ -31,6 +31,8 @@
       </mat-form-field>
     </div>
 
+    <div class="col-12" class="w-100 h-25p"></div>
+
     <div class="col-12" class="w-100">
       <app-week-days-bussiness-hours [day]="{ name: 'Sun', data: formGroup.get('sun')}"></app-week-days-bussiness-hours>
     </div>
@@ -59,33 +61,45 @@
       <app-week-days-bussiness-hours [day]="{ name: 'Sat', data: formGroup.get('sat')}"></app-week-days-bussiness-hours>
     </div>
 
-    <div class="col-12" class="w-100">
-      <mat-form-field>
+    <div class="col-12" class="w-100 h-25p"></div>
+
+    <div class="col-12">
+      <mat-form-field class="w-100">
         <input formControlName="startDate" matInput [matDatepicker]="startDate" placeholder="Choose a start date" >
         <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
         <mat-datepicker touchUi="true" #startDate></mat-datepicker>
       </mat-form-field>
     </div>
 
-    <div class="col-12" class="w-100">
+    <div class="col-12" class="w-100 h-15p"></div>
+
+    <div class="col-12">
       <mat-checkbox formControlName="tillICancel">Active untill I cancel</mat-checkbox>
     </div>
 
-    <div class="col-12" class="w-100">
-      <mat-form-field>
+    <div class="col-12" class="w-100 h-15p"></div>
+
+    <div class="col-12" >
+      <mat-form-field class="w-100">
         <input formControlName="endDate" matInput [matDatepicker]="endDate" placeholder="Choose a end date">
         <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
         <mat-datepicker touchUi="true" #endDate></mat-datepicker>
       </mat-form-field>
     </div>
 
-    <div class="col-12" class="w-100">
+    <div class="col-12" class="w-100 h-20p"></div>
+
+    <div class="col-12">
       <mat-checkbox formControlName="useGPS">Use my present GPS location for accurate location</mat-checkbox>
     </div>
 
-    <div class="col-12" class="w-100">
+    <div class="col-12" class="w-100 h-30p"></div>
+
+    <div class="col-12">
       <mat-checkbox formControlName="useProfileAddress">Use my profile address</mat-checkbox>
     </div>
+
+    <div class="col-12" class="w-100 h-20p"></div>
 
     <div class="col-12">
       <mat-form-field class="w-100">
@@ -123,9 +137,13 @@
       </mat-form-field>
     </div>
 
+    <div class="col-12" class="w-100 h-30p"></div>
+
     <div class="col-12 ta-center">
-      <button mat-button>Save</button>
+      <button mat-raised-button>Save</button>
     </div>
 
-  </div>
+    <div class="col-12" class="w-100 h-50p"></div>
+    
+  </div>  
 </form>

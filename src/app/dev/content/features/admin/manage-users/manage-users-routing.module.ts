@@ -4,7 +4,6 @@ import { CanActivateGuardService } from '../../shared/services/auth/can-activate
 import { AdminUserSearchComponent } from './admin-user-search/admin-user-search.component';
 import { ManageUsersComponent } from './manage-users.component';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -30,7 +29,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule,
     RouterModule.forChild(routes)
   ],
   exports: [RouterModule]

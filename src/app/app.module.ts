@@ -1,5 +1,5 @@
+import { SharedModule } from './common/shared/shared.module';
 import { AppResponsiveService } from './app-responsive.service';
-import { AngularMaterialDesignModule } from './common/angular-material-design/angular-material-design.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ValidationService } from './dev/content/features/shared/services/validation/validation.service';
 import { ProfileUsersService } from './dev/content/features/profile-users/users.service';
@@ -33,9 +33,9 @@ import { LogoutComponent } from './dev/logout/logout.component';
     LogoutComponent
   ],
   imports: [
+    SharedModule,
     BrowserModule,
     BrowserAnimationsModule,
-    AngularMaterialDesignModule,
     AppRoutingModule,
     HttpModule
   ],

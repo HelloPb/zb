@@ -125,6 +125,33 @@
 .h-50p {
   height: 50px;
 }
+.h-45p {
+  height: 45px;
+}
+.h-40p {
+  height: 40px;
+}
+.h-35p {
+  height: 35px;
+}
+.h-30p {
+  height: 30px;
+}
+.h-25p {
+  height: 25px;
+}
+.h-20p {
+  height: 20px;
+}
+.h-15p {
+  height: 15px;
+}
+.h-10p {
+  height: 10px;
+}
+.h-5p {
+  height: 5px;
+}
 .b-n {
   border: none
 }

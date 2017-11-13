@@ -1,13 +1,13 @@
+import { SharedModule } from '../../../../common/shared/shared.module';
 import { MyStoreSearchResultComponent } from './my-store-search-result/my-store-search-result.component';
 import { MyStoreSearchCriteriaComponent } from './my-store-search-criteria/my-store-search-criteria.component';
 import { MyStoreRouterModule } from './my-store-router.module';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 import { MyStoreComponent } from './my-store.component';
 
 @NgModule({
   imports: [
-    CommonModule,
+    SharedModule,
     MyStoreRouterModule
   ],
   declarations: [MyStoreComponent, MyStoreSearchCriteriaComponent, MyStoreSearchResultComponent]

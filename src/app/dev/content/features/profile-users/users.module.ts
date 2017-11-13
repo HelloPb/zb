@@ -1,4 +1,4 @@
-import { SharedModule } from '../shared/modules/shared/shared.module';
+import { SharedModule } from '../../../../common/shared/shared.module';
 import { UserSearchModule } from './user-search/user-search.module';
 import { AddEditUserModule } from './add-edit-user/add-edit-user.module';
 import { ProfileUsersRoutingModule } from './users-routing.module';

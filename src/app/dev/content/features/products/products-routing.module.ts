@@ -1,8 +1,6 @@
-import { ProductSearchComponent } from './product-search/product-search.component';
 import { ProfileProductsComponent } from './products.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
   {
@@ -30,7 +28,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule,
     RouterModule.forChild(routes)
   ],
   exports: [RouterModule]

@@ -1,4 +1,4 @@
-import { SharedModule } from '../../../shared/modules/shared/shared.module';
+import { SharedModule } from '../../../../../../common/shared/shared.module';
 import { DateTimePickerModule } from '../../../shared/comps/forms/date-time-picker/date-time-picker.module';
 import { StandardProductRoutingModule } from './standard-product-routing.module';
 import { StandardProductComponent } from './standard-product.component';

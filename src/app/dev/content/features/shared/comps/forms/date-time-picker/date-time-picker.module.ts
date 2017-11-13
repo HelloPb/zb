@@ -1,4 +1,4 @@
-import { SharedModule } from '../../../modules/shared/shared.module';
+import { SharedModule } from '../../../../../../../common/shared/shared.module';
 import { TimeRangePickerComponent } from './time-range-picker/time-range-picker.component';
 import { NgModule } from '@angular/core';
 import { TimePickerComponent } from './time-picker/time-picker.component';
