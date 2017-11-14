@@ -1,2 +1,10 @@
-<app-my-store-search-criteria></app-my-store-search-criteria>
-<app-my-store-search-result></app-my-store-search-result>
+<mat-sidenav-container class="zb-sidenav-container">
+  <mat-sidenav #sidenav mode="{{rsv.mode}}" opened="{{rsv.opened}}">
+    <div>
+      <app-my-store-search-criteria></app-my-store-search-criteria>
+    </div>
+  </mat-sidenav>
+  <div class="w-100" (window:resize)="rsv.setSideNav(600)">
+    <app-my-store-search-result></app-my-store-search-result>
+  </div>
+</mat-sidenav-container>

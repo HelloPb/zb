@@ -1,3 +1,4 @@
+import { AppResponsiveService } from '../../../../app-responsive.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyStoreComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private rsv: AppResponsiveService
+  ) { }
 
   ngOnInit() {
   }

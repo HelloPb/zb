@@ -13,18 +13,8 @@ export class StandardProductComponent implements OnInit {
   private formGroup: FormGroup;
 
   constructor(
-    private route: ActivatedRoute,
-    private router: Router,
-    private formBuilder: FormBuilder,
     private rsv: AppResponsiveService
   ) {
-    this.create();
-  }
-
-  private create(): void {
-    this.formGroup = this.formBuilder.group({
-      time: ['10:00', Validators.required ]
-    });
   }
 
   ngOnInit() {
