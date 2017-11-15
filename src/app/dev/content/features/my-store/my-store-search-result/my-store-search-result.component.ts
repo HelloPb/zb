@@ -1,4 +1,6 @@
+import { MyStoreService } from '../my-store.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-my-store-search-result',
@@ -7,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyStoreSearchResultComponent implements OnInit {
 
-  constructor() { }
+  constructor(private mystore: MyStoreService) {
+  }
 
   ngOnInit() {
   }

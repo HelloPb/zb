@@ -1,10 +1,10 @@
-<mat-expansion-panel>
+<mat-expansion-panel *ngFor="let p of mystore.products | async">
   <mat-expansion-panel-header>
     <mat-panel-title>
-      Milk
+      {{p.name}}
     </mat-panel-title>
     <mat-panel-description>
-      10-May-2017
+      {{p.createdDate}}
     </mat-panel-description>
   </mat-expansion-panel-header>
 
@@ -12,289 +12,88 @@
     <div class="col col-auto">
       <div>
         <span>Price: </span>
-        <span></span>
+        <span>{{p.price}}</span>
       </div>
       <div>
         <span>Description: </span>
-        <span></span>
+        <span>{{p.description}}</span>
       </div>
       <div>
         <span>Quantity: </span>
-        <span></span>
+        <span>{{p.quantity}}></span>
       </div>
       <div>
         <span>Sun: </span>
-        <span></span>
+        <span>{{p.sun}}</span>
       </div>
       <div>
         <span>Mon: </span>
-        <span></span>
+        <span>{{p.mon}}</span>
       </div>
       <div>
         <span>Tue: </span>
-        <span></span>
+        <span>{{p.tue}}</span>
       </div>
       <div>
         <span>Wed: </span>
-        <span></span>
+        <span>{{p.wed}}</span>
       </div>
       <div>
         <span>Thu: </span>
-        <span></span>
+        <span>{{p.thu}}</span>
       </div>
       <div>
         <span>Fri: </span>
-        <span></span>
+        <span>{{p.fri}}</span>
       </div>
       <div>
         <span>Sat: </span>
-        <span></span>
+        <span>{{p.sat}}</span>
       </div>
       <div>
         <span>Start Date: </span>
-        <span></span>
+        <span>{{p.startDate}}</span>
       </div>
       <div>
         <span>Active until I cancel: </span>
-        <span></span>
+        <span>{{p.tillICancel}}</span>
       </div>
       <div>
         <span>End Date: </span>
-        <span></span>
+        <span>{{p.endDate}}</span>
       </div>
       <div>
         <span>Use GPS for accurate location: </span>
-        <span></span>
+        <span>{{p.useGPS}}</span>
       </div>
       <div>
         <span>Using Profile Address: </span>
-        <span></span>
+        <span>{{p.useProfileAddress}}</span>
       </div>
       <div>
         <span>Address: </span>
-        <span></span>
+        <span>{{p.address1}}</span>
       </div>
       <div>
         <span>Address 2: </span>
-        <span></span>
+        <span>{{p.address2}}</span>
       </div>
       <div>
         <span>Country: </span>
-        <span></span>
+        <span>{{p.country}}</span>
       </div>
       <div>
         <span>State: </span>
-        <span></span>
+        <span>{{p.state}}</span>
       </div>
       <div>
         <span>City: </span>
-        <span></span>
+        <span>{{p.city}}</span>
       </div>
       <div>
         <span>Post Code: </span>
-        <span></span>
+        <span>{{p.postcode}}</span>
       </div>
     </div>
   </div>
-
-</mat-expansion-panel>
-<mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Milk
-    </mat-panel-title>
-    <mat-panel-description>
-      10-May-2017
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-
-  <div class="row no-gutters">
-    <div class="col col-auto">
-      <div>
-        <span>Price: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Description: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Quantity: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Sun: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Mon: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Tue: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Wed: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Thu: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Fri: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Sat: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Start Date: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Active until I cancel: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>End Date: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Use GPS for accurate location: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Using Profile Address: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Address: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Address 2: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Country: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>State: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>City: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Post Code: </span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-
-</mat-expansion-panel>
-<mat-expansion-panel>
-  <mat-expansion-panel-header>
-    <mat-panel-title>
-      Milk
-    </mat-panel-title>
-    <mat-panel-description>
-      10-May-2017
-    </mat-panel-description>
-  </mat-expansion-panel-header>
-
-  <div class="row no-gutters">
-    <div class="col col-auto">
-      <div>
-        <span>Price: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Description: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Quantity: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Sun: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Mon: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Tue: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Wed: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Thu: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Fri: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Sat: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Start Date: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Active until I cancel: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>End Date: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Use GPS for accurate location: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Using Profile Address: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Address: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Address 2: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Country: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>State: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>City: </span>
-        <span></span>
-      </div>
-      <div>
-        <span>Post Code: </span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-
 </mat-expansion-panel>

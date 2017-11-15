@@ -1,3 +1,4 @@
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './common/shared/shared.module';
 import { AppResponsiveService } from './app-responsive.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -5,8 +6,6 @@ import { ValidationService } from './dev/content/features/shared/services/valida
 import { ProfileUsersService } from './dev/content/features/profile-users/users.service';
 import { ProfileUsersResolverService } from './dev/content/features/profile-users/users-resolver.service';
 import { UserCultureService } from './dev/content/features/shared/services/culture/user-culture/user-culture.service';
-import { HttpModule } from '@angular/http';
-import { HttpWrap } from './dev/content/features/shared/services/http/http-wrap.service';
 import {
   CountryCultureService,
 } from './dev/content/features/shared/services/culture/country-culture/country-culture.service';
@@ -37,10 +36,10 @@ import { LogoutComponent } from './dev/logout/logout.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpModule
+    HttpClientModule
   ],
   providers: [
-    HttpWrap,
+    HttpClient,
     CanActivateGuardService,
     AuthService,
     YesNoDialogService,

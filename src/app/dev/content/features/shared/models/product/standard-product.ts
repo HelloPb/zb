@@ -14,8 +14,8 @@ export class StandardProduct {
     public fri: TimeRangePicker[];
     public sat: TimeRangePicker[];
     public startDate: string;
-    public endDate: string;
     public tillICancel: string;
+    public endDate: string;
     public useGPS: string;
     public useProfileAddress: string;
     public address1: string;
@@ -24,6 +24,7 @@ export class StandardProduct {
     public state: string;
     public city: string;
     public postcode: string;
+    public createdDate: string;
 
     constructor() {
         this.name = '';
@@ -49,5 +50,6 @@ export class StandardProduct {
         this.state = '';
         this.city = '';
         this.postcode = '';
+        this.createdDate = '';
     }
 }

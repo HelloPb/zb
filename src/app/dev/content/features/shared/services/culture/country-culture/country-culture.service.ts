@@ -1,15 +1,15 @@
+import { HttpClient } from '@angular/common/http';
 import { CountryCulture } from '../../../models/culture/country-culture';
-import { Observable } from 'rxjs/Rx';
-import { HttpWrap } from '../../http/http-wrap.service';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class CountryCultureService {
 
-  constructor(private http: HttpWrap) { }
+  constructor(private http: HttpClient) { }
 
   public get(): Observable<CountryCulture> {
-    return this.http.get('').map(q => q.json());
+    return this.http.get<CountryCulture>('');
   }
 
 }

@@ -1,8 +1,7 @@
 import { UserProfile } from '../shared/models/users/user-profile';
 import { ProfileUsersService } from './users.service';
-import { Observable } from 'rxjs/Rx';
+import { Observable } from 'rxjs/Observable';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
-import { HttpWrap } from '../shared/services/http/http-wrap.service';
 import { Injectable } from '@angular/core';
 
 @Injectable()
