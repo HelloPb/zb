@@ -1,4 +1,4 @@
-import { SharedModule } from '../../../../../common/shared/shared.module';
+import { SharedModule } from '../../../../../common/modules/shared.module';
 import { AddEditUserRoutingModule } from './add-edit-user-routing.module';
 import { AddEditUserComponent } from './add-edit-user.component';
 import { NgModule } from '@angular/core';

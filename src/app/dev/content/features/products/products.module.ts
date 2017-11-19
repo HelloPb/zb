@@ -1,4 +1,4 @@
-import { SharedModule } from '../../../../common/shared/shared.module';
+import { SharedModule } from '../../../../common/modules/shared.module';
 import { SpecificProductModule } from './add-edit-product/specific-product/specific-product.module';
 import { StandardProductModule } from './add-edit-product/standard-product/standard-product.module';
 import { ProfileProductsRoutingModule } from './products-routing.module';

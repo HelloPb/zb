@@ -1,6 +1,6 @@
+import { UserCultureService } from '../../../../../common/services/culture/user-culture/user-culture.service';
+import { CountryCultureService } from '../../../../../common/services/culture/country-culture/country-culture.service';
 import { AppResponsiveService } from '../../../../../app-responsive.service';
-import { UserCultureService } from '../../shared/services/culture/user-culture/user-culture.service';
-import { CountryCultureService } from '../../shared/services/culture/country-culture/country-culture.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

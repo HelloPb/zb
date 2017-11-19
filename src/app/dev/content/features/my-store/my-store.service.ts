@@ -1,5 +1,4 @@
 import { StandardProduct } from '../shared/models/product/standard-product';
-import { ReplaySubject } from 'rxjs/ReplaySubject';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
@@ -9,9 +8,13 @@ export class MyStoreService {
 
   public products: Observable<StandardProduct[]>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+
+    this.products = Observable.create();
+  }
 
   public get(): Observable<StandardProduct[]> {
-    return this.http.get<StandardProduct[]>('');
+    this.products = this.http.get<StandardProduct[]>('api/mystore');
+    return this.products;
   }
 }

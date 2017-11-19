@@ -1,6 +1,6 @@
+import { CanComponentDeactivate } from '../../../../../common/services/guard-deactivate/can-deactivate-guard.service';
+import { YesNoDialogService } from '../../../../../common/comps/popups/yesno/yes-no-dialog.service';
 import { AppResponsiveService } from '../../../../../app-responsive.service';
-import { YesNoDialogService } from '../../shared/services/dialog/yesno/yes-no-dialog.service';
-import { CanComponentDeactivate } from '../../shared/services/auth/can-deactivate-guard/can-deactivate-guard.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 

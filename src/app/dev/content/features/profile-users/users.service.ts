@@ -9,11 +9,11 @@ export class ProfileUsersService {
 
   constructor(private http: HttpClient) { }
 
-  get() {
+  get(): Observable<UserProfile[]> {
     return this.http.get<UserProfile[]>('');
   }
 
-  getById(id: string) {
+  getById(id: string): Observable<UserProfile> {
     return this.http.get<UserProfile>('');
   }
 

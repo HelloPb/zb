@@ -1,4 +1,4 @@
-import { SharedModule } from '../../common/shared/shared.module';
+import { SharedModule } from '../../common/modules/shared.module';
 import { MenuModule } from './menu/menu.module';
 import { HomeModule } from './home/home.module';
 import { NgModule } from '@angular/core';

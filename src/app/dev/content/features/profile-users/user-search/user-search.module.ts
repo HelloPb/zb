@@ -1,4 +1,4 @@
-import { SharedModule } from '../../../../../common/shared/shared.module';
+import { SharedModule } from '../../../../../common/modules/shared.module';
 import { UserSearchRoutingModule } from './user-search-routing.module';
 import { UserSearchComponent } from './user-search.component';
 import { NgModule } from '@angular/core';

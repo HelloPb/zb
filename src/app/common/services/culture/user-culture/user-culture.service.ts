@@ -1,5 +1,5 @@
+import { UserCulture } from '../../../../dev/content/features/shared/models/culture/user-culture';
 import { HttpClient } from '@angular/common/http';
-import { UserCulture } from '../../../models/culture/user-culture';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 

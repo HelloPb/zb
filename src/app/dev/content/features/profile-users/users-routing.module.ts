@@ -3,7 +3,6 @@ import { ProfileUsersComponent } from './users.component';
 import { AddEditUserComponent } from './add-edit-user/add-edit-user.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { CanDeactivateGuardService } from '../shared/services/auth/can-deactivate-guard/can-deactivate-guard.service';
 
 const routes: Routes = [
   {

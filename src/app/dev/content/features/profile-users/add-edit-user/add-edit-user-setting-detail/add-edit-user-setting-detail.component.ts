@@ -1,5 +1,5 @@
-import { YesNoDialogService } from '../../../shared/services/dialog/yesno/yes-no-dialog.service';
-import { Observable } from 'rxjs/Rx';
+import { YesNoDialogService } from '../../../../../../common/comps/popups/yesno/yes-no-dialog.service';
+import { Observable } from 'rxjs/Observable';
 import { selector } from 'rxjs/operator/publish';
 import { Component, OnInit } from '@angular/core';
 

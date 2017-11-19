@@ -1,4 +1,4 @@
-import { CanActivateGuardService } from '../shared/services/auth/can-activate-guard/can-activate-guard.service';
+import { CanActivateGuardService } from '../../../../common/services/guard-activate/can-activate-guard.service';
 import { AdminComponent } from './admin.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';

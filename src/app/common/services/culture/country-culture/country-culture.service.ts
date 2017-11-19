@@ -1,5 +1,5 @@
+import { CountryCulture } from '../../../../dev/content/features/shared/models/culture/country-culture';
 import { HttpClient } from '@angular/common/http';
-import { CountryCulture } from '../../../models/culture/country-culture';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 

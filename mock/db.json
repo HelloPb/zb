@@ -1,0 +1,29 @@
+{
+    "sp": [{
+        "id":1,
+        "name": "prod 1",
+        "price": "10",
+        "description": "",
+        "quantity": "",
+        "daysInAWeek": "",
+        "sun": [],
+        "mon": [],
+        "tue": [],
+        "wed": [],
+        "thu": [],
+        "fri": [],
+        "sat": [],
+        "startDate": "",
+        "endDate": "",
+        "tillICancel": "",
+        "useGPS": "",
+        "useProfileAddress": "",
+        "address1": "",
+        "address2": "",
+        "country": "",
+        "state": "",
+        "city": "",
+        "postcode": "",
+        "createdDate": ""
+    }]
+}

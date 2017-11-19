@@ -1,4 +1,4 @@
-import { SharedModule } from '../../../../common/shared/shared.module';
+import { SharedModule } from '../../../../common/modules/shared.module';
 import { AdminRoutingModule } from './admin-routing.module';
 import { NgModule } from '@angular/core';
 import { AdminComponent } from './admin.component';

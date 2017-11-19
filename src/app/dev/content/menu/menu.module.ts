@@ -1,4 +1,4 @@
-import { AngularMaterialDesignModule } from '../../../common/angular-material-design/angular-material-design.module';
+import { SharedModule } from '../../../common/modules/shared.module';
 import { RouterModule } from '@angular/router';
 import { TopMenuComponent } from './top-menu/top-menu.component';
 import { NgModule } from '@angular/core';
@@ -7,8 +7,7 @@ import { LeftMenuComponent } from './left-menu/left-menu.component';
 
 @NgModule({
   imports: [
-    CommonModule,
-    AngularMaterialDesignModule,
+    SharedModule,
     RouterModule
   ],
   declarations: [TopMenuComponent, LeftMenuComponent],

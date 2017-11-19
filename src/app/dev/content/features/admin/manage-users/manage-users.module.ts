@@ -1,5 +1,5 @@
+import { SharedModule } from '../../../../../common/modules/shared.module';
 import { ManageUsersRoutingModule } from './manage-users-routing.module';
-import { SharedModule } from '../../../../../common/shared/shared.module';
 import { NgModule } from '@angular/core';
 import { ManageUsersComponent } from './manage-users.component';
 import { AdminUserSearchComponent } from './admin-user-search/admin-user-search.component';

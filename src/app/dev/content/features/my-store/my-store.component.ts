@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-my-store',
   templateUrl: './my-store.component.html',
   styleUrls: ['./my-store.component.css'],
-  providers: [ MyStoreService ]
+  providers: [MyStoreService]
 })
 export class MyStoreComponent implements OnInit {
 
@@ -16,5 +16,4 @@ export class MyStoreComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
