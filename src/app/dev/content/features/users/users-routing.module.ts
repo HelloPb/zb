@@ -1,5 +1,5 @@
-import { ProfileUsersResolverService } from './users-resolver.service';
-import { ProfileUsersComponent } from './users.component';
+import { UsersResolverService } from './users-resolver.service';
+import { UsersComponent } from './users.component';
 import { AddEditUserComponent } from './add-edit-user/add-edit-user.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
@@ -7,18 +7,18 @@ import { NgModule } from '@angular/core';
 const routes: Routes = [
   {
     path: '',
-    component: ProfileUsersComponent,
+    component: UsersComponent,
     children: [
       {
         path: '', redirectTo: 'addedit'
       },
       {
         path: 'addedit',
-        loadChildren: 'app/dev/content/features/profile-users/add-edit-user/add-edit-user.module#AddEditUserModule'
+        loadChildren: 'app/dev/content/features/users/add-edit-user/add-edit-user.module#AddEditUserModule'
       },
       {
         path: 'search',
-        loadChildren: 'app/dev/content/features/profile-users/user-search/user-search.module#UserSearchModule'
+        loadChildren: 'app/dev/content/features/users/user-search/user-search.module#UserSearchModule'
       }
     ]
   }
@@ -30,4 +30,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class ProfileUsersRoutingModule { }
+export class UsersRoutingModule { }

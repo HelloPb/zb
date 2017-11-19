@@ -9,8 +9,8 @@ import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common
 import { AppResponsiveService } from './app-responsive.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ValidationService } from './dev/content/features/shared/services/validation/validation.service';
-import { ProfileUsersService } from './dev/content/features/profile-users/users.service';
-import { ProfileUsersResolverService } from './dev/content/features/profile-users/users-resolver.service';
+import { UsersService } from './dev/content/features/users/users.service';
+import { UsersResolverService } from './dev/content/features/users/users-resolver.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -44,8 +44,8 @@ import { LogoutComponent } from './dev/logout/logout.component';
     YesNoDialogService,
     CountryCultureService,
     UserCultureService,
-    ProfileUsersResolverService,
-    ProfileUsersService,
+    UsersResolverService,
+    UsersService,
     ValidationService,
     AppResponsiveService,
     {

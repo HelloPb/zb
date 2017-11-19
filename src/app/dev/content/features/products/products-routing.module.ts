@@ -1,11 +1,11 @@
-import { ProfileProductsComponent } from './products.component';
+import { ProductsComponent } from './products.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 
 const routes: Routes = [
   {
     path: '',
-    component: ProfileProductsComponent,
+    component: ProductsComponent,
     children: [
       {
         path: '', redirectTo: 'search'
@@ -32,4 +32,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class ProfileProductsRoutingModule { }
+export class ProductsRoutingModule { }

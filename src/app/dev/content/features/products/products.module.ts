@@ -1,8 +1,8 @@
 import { SharedModule } from '../../../../common/modules/shared.module';
 import { SpecificProductModule } from './add-edit-product/specific-product/specific-product.module';
 import { StandardProductModule } from './add-edit-product/standard-product/standard-product.module';
-import { ProfileProductsRoutingModule } from './products-routing.module';
-import { ProfileProductsComponent } from './products.component';
+import { ProductsRoutingModule } from './products-routing.module';
+import { ProductsComponent } from './products.component';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -10,8 +10,8 @@ import { NgModule } from '@angular/core';
     SharedModule,
     StandardProductModule,
     SpecificProductModule,
-    ProfileProductsRoutingModule
+    ProductsRoutingModule
   ],
-  declarations: [ProfileProductsComponent]
+  declarations: [ProductsComponent]
 })
-export class ProfileProductsModule { }
+export class ProductsModule { }

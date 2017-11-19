@@ -19,11 +19,11 @@ const routes: Routes = [
       },
       {
         path: 'users',
-        loadChildren: 'app/dev/content/features/profile-users/users.module#ProfileUsersModule'
+        loadChildren: 'app/dev/content/features/users/users.module#UsersModule'
       },
       {
         path: 'products',
-        loadChildren: 'app/dev/content/features/products/products.module#ProfileProductsModule'
+        loadChildren: 'app/dev/content/features/products/products.module#ProductsModule'
       },
       {
         path: 'mystore',

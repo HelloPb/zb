@@ -1,8 +1,8 @@
 import { SharedModule } from '../../../../common/modules/shared.module';
 import { UserSearchModule } from './user-search/user-search.module';
 import { AddEditUserModule } from './add-edit-user/add-edit-user.module';
-import { ProfileUsersRoutingModule } from './users-routing.module';
-import { ProfileUsersComponent } from './users.component';
+import { UsersRoutingModule } from './users-routing.module';
+import { UsersComponent } from './users.component';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -10,8 +10,8 @@ import { NgModule } from '@angular/core';
     SharedModule,
     UserSearchModule,
     AddEditUserModule,
-    ProfileUsersRoutingModule
+    UsersRoutingModule
   ],
-  declarations: [ProfileUsersComponent]
+  declarations: [UsersComponent]
 })
-export class ProfileUsersModule { }
+export class UsersModule { }

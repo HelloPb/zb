@@ -1,12 +1,12 @@
 import { UserProfile } from '../shared/models/users/user-profile';
-import { ProfileUsersService } from './users.service';
+import { UsersService } from './users.service';
 import { Observable } from 'rxjs/Observable';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class ProfileUsersResolverService implements Resolve<UserProfile> {
-  constructor(private us: ProfileUsersService, private router: Router) { }
+export class UsersResolverService implements Resolve<UserProfile> {
+  constructor(private us: UsersService, private router: Router) { }
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<UserProfile> {
     const id = route.paramMap.get('id');
