@@ -1,3 +1,5 @@
+import { ActivatedRoute, Router } from '@angular/router';
+import { StandardProductService } from '../standard-product.service';
 import { StandardProductSharedMethodService } from './standard-product-shared-method.service';
 import {
   TimeRangePickerComponent,
@@ -18,8 +20,11 @@ export class StandardProductDetailComponent implements OnInit {
   private formGroup: FormGroup;
 
   constructor(
+    private route: ActivatedRoute,
+    private router: Router,
     private formBuilder: FormBuilder,
     private validationService: ValidationService,
+    private spService: StandardProductService,
     private shared: StandardProductSharedMethodService
   ) {
     this.create();
@@ -65,6 +70,16 @@ export class StandardProductDetailComponent implements OnInit {
 
   private setTimeRangeForm(ranges: TimeRangePicker[]) {
     return this.formBuilder.array(ranges.map(x => this.shared.timeRangeForm(x)));
+  }
+
+  public save(): void {
+    this.spService.post(this.formGroup.getRawValue()).subscribe(success => {
+      this.gotoMyStore();
+    });
+  }
+
+  private gotoMyStore(): void {
+    this.router.navigate(['/content/mystore']);
   }
 
   public ngOnInit(): void {
