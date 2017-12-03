@@ -21,8 +21,4 @@ export class TimeRangePickerComponent {
   ) {
     this.formGroup = data.formGroup;
   }
-
-  onNoClick(): void {
-    this.dialogRef.close();
-  }
 }

@@ -35,7 +35,7 @@ export class TimePickerComponent implements OnInit {
   }
 
   private addMinute(minute: number): void {
-    if (+minute < 60) {
+    if (+minute < 59) {
       minute = +minute + 1;
       this.time.patchValue({ m: minute });
     }

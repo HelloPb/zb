@@ -1,12 +1,12 @@
 <form [formGroup]="formGroup">
   <mat-accordion class="week-headers-align">
     <mat-expansion-panel hideToggle="true">
-      <mat-expansion-panel-header>
+      <mat-expansion-panel-header  style="max-height: 50px">
         <div class="row no-gutters w-100">
           <div class="col col-auto w-30p">
             {{day.name}}
           </div>
-          <div class="col ta-center">
+          <div class="col text-center">
             Add/Edit Hours
           </div>
           <div class="col col-auto">
@@ -15,18 +15,16 @@
         </div>
       </mat-expansion-panel-header>
 
-      <div class="ta-center">
-        <button mat-icon-button>
-          <mat-icon class="fs-22p" fontSet="fa" fontIcon="fa-plus-square-o" aria-hidden="false" (click)="addTimeRange()"></mat-icon>
-        </button>
+      <div class="text-center">
+        <i class="fa fa-plus-square zb-icon primary" (click)="addTimeRange()"></i>
       </div>
 
-      <div formArrayName="xday" style="text-align: center">
+      <div formArrayName="xday" class="text-center">
 
         <div *ngFor="let timeRange of xday.controls; let i=index" [formGroupName]="i" class="h-50p">
 
           <div class="d-ib w-40p">
-            <mat-checkbox formControlName="id"></mat-checkbox>
+            <mat-checkbox formControlName="id" color="accent"></mat-checkbox>
           </div>
 
           <div class="d-ib" formGroupName="from">
@@ -44,11 +42,11 @@
           <div class="d-ib">
 
             <button mat-icon-button>
-              <mat-icon class="fs-22p" fontSet="fa" fontIcon="fa-pencil-square-o" aria-hidden="false" (click)="editTimeRange(timeRange)"></mat-icon>
+              <mat-icon color="accent" class="fs-22p" fontSet="fa" fontIcon="fa-pencil-square-o" aria-hidden="false" (click)="editTimeRange(timeRange)"></mat-icon>
             </button>
 
             <button mat-icon-button>
-              <mat-icon class="fs-22p" fontSet="fa" fontIcon="fa-trash" aria-hidden="false" (click)="deleteTimeRange(i, xday)"></mat-icon>
+              <mat-icon color="warn" class="fs-22p" fontSet="fa" fontIcon="fa-trash" aria-hidden="false" (click)="deleteTimeRange(i, xday)"></mat-icon>
             </button>
 
           </div>

@@ -78,6 +78,10 @@ export class StandardProductDetailComponent implements OnInit {
     });
   }
 
+  public cancel(): void {
+    this.gotoMyStore();
+  }
+
   private gotoMyStore(): void {
     this.router.navigate(['/content/mystore']);
   }
@@ -85,3 +89,4 @@ export class StandardProductDetailComponent implements OnInit {
   public ngOnInit(): void {
   }
 }
+

@@ -8,6 +8,7 @@ import { ValidationService } from '../../../../../shared/services/validation/val
 import { selector } from 'rxjs/operator/publish';
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { MatDialog } from '@angular/material';
+import { cloneDeep } from 'lodash';
 
 @Component({
   selector: 'app-week-days-bussiness-hours',
@@ -36,12 +37,8 @@ export class WeekDaysBussinessHoursComponent implements OnInit {
   }
 
   private addTimeRange(): void {
-    const fg = this.shared.timeRangeForm({ id: 1, from: { h: '09', m: '00' }, to: { h: '05', m: '00' } });
-    this.xday.push(fg);
-    this.editTimeRange(fg);
-  }
 
-  private editTimeRange(fg: FormGroup) {
+    const fg = this.shared.timeRangeForm({ id: 1, from: { h: '09', m: '00' }, to: { h: '05', m: '00' } });
 
     const dialogRef = this.dialog.open(TimeRangePickerComponent, {
       width: '250px',
@@ -49,7 +46,33 @@ export class WeekDaysBussinessHoursComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      if (result === true) {
+        this.xday.push(fg);
+      }
+    });
+  }
+
+  private editTimeRange(fg: FormGroup) {
+
+    const r = fg.getRawValue();
+
+    const fnew = this.shared.timeRangeForm({ id: r.id, from: { h: r.from.h, m: r.from.m }, to: { h: r.to.h, m: r.to.m } });
+
+    const dialogRef = this.dialog.open(TimeRangePickerComponent, {
+      width: '250px',
+      data: { formGroup: fnew }
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+
+      if (result === true) {
+
+        const f = fnew.getRawValue();
+
+        fg.controls['from'].patchValue({ h: f.from.h, m: f.from.m });
+        fg.controls['to'].patchValue({ h: f.to.h, m: f.to.m });
+
+      }
     });
   }
 

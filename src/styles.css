@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 .zb-card {
   width: 280px;
   padding: 10px!important;
@@ -9,186 +9,266 @@
 }
 
 .zb-card > mat-card-content {
-  max-height: 200px; 
+  max-height: 200px;
   overflow: auto;
+}
+
+.zb-dialog-frame {
+  border: 1px solid rgba(0, 0, 0, .03);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, .24), 0 0 2px rgba(0, 0, 0, .12);
+  margin: 4px;
+}
+
+.zb-title {
+  color: rgba(0, 0, 0, .54);
+  background: rgba(0, 0, 0, .03);
+}
+
+.zb-icon {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.primary {
+  color: #4051b4;
 }
 
 .d-flex {
   display: flex;
 }
+
 .d-ib {
   display: inline-block;
 }
+
 .d-b {
   display: block;
 }
+
 .d-i {
   display: inline;
 }
+
 .float-right {
   float: right
 }
-.ta-center {
+
+.text-center {
   text-align: center;
 }
 
 .pb-5 {
   padding-bottom: 5px;
 }
+
 .p-5 {
   padding: 5px;
 }
+
 .p-10 {
   padding: 10px;
 }
+
 .p-15 {
   padding: 15px;
 }
+
 .p-15i {
   padding: 15px!important;
 }
+
 .mx-auto {
   margin: 0 auto;
 }
+
 .mb-5 {
   margin-bottom: 5px;
 }
+
 .mr-5 {
   margin-right: 5px;
 }
+
 .m-5 {
   margin: 5px;
 }
+
 .w-auto {
   width: auto;
 }
+
 .w-100 {
   width: 100%;
 }
+
 .w-10p {
   width: 10px;
 }
+
 .w-15p {
   width: 15px;
 }
+
 .w-20p {
   width: 20px;
 }
+
 .w-25p {
   width: 25px;
 }
+
 .w-30p {
   width: 30px;
 }
+
 .w-35p {
   width: 35px;
 }
+
 .w-40p {
   width: 40px;
 }
+
 .w-45p {
   width: 45px;
 }
+
 .w-50p {
   width: 50px;
 }
+
 .w-55p {
   width: 55px;
 }
+
 .w-60p {
   width: 60px;
 }
+
 .w-65p {
   width: 65px;
 }
+
 .w-70p {
   width: 70px;
 }
+
 .w-75p {
   width: 75px;
 }
+
 .w-80p {
   width: 80px;
 }
+
 .w-85p {
   width: 85px;
 }
+
 .w-90p {
   width: 90px;
 }
+
 .w-95p {
   width: 95px;
 }
+
 .w-100p {
   width: 100px;
 }
+
 .h-50p {
   height: 50px;
 }
+
 .h-45p {
   height: 45px;
 }
+
 .h-40p {
   height: 40px;
 }
+
 .h-35p {
   height: 35px;
 }
+
 .h-30p {
   height: 30px;
 }
+
 .h-25p {
   height: 25px;
 }
+
 .h-20p {
   height: 20px;
 }
+
 .h-15p {
   height: 15px;
 }
+
 .h-10p {
   height: 10px;
 }
+
 .h-5p {
   height: 5px;
 }
+
 .b-n {
   border: none
 }
-.bg-transparent
-{
+
+.bg-transparent {
   background-color: transparent;
 }
+
 .fs-20p {
   font-size: 20px;
 }
+
 .fs-21p {
   font-size: 21px;
 }
+
 .fs-22p {
   font-size: 22px;
 }
+
 .fs-23p {
   font-size: 23px;
 }
+
 .fs-24p {
   font-size: 24px;
 }
+
 .fs-25p {
   font-size: 25px;
 }
+
 .fs-26p {
   font-size: 26px;
 }
+
 .fs-27p {
   font-size: 27px;
 }
+
 .fs-28p {
   font-size: 28px;
 }
+
 .fs-29p {
   font-size: 29px;
 }
+
 .fs-30p {
   font-size: 30px;
 }
