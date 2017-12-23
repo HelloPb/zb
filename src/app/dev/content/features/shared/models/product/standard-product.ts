@@ -1,6 +1,7 @@
 import { TimeRangePicker } from '../date-time/time-picker';
 
 export class StandardProduct {
+    public id: string;
     public name: string;
     public price: string;
     public description: string;
@@ -27,6 +28,7 @@ export class StandardProduct {
     public createdDate: string;
 
     constructor() {
+        this.id = '';
         this.name = '';
         this.price = '';
         this.description = '';

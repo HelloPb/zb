@@ -1,3 +1,4 @@
+import { ActivatedRoute, Router } from '@angular/router';
 import { MyStoreService } from '../my-store.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
@@ -9,7 +10,18 @@ import { Observable } from 'rxjs/Observable';
 })
 export class MyStoreSearchResultComponent implements OnInit {
 
-  constructor(private mystore: MyStoreService) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private mystore: MyStoreService) {
+  }
+
+  public edit(id: number): void {
+    this.gotoEditProduct(id);
+  }
+
+  private gotoEditProduct(id: number): void {
+    this.router.navigate([`/content/products/standard/${id}`]);
   }
 
   ngOnInit() {

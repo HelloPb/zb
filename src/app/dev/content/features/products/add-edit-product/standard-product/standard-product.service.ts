@@ -8,7 +8,9 @@ export class StandardProductService {
 
   public products: Observable<StandardProduct[]>;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.products = Observable.create();
+  }
 
   public get(): Observable<StandardProduct[]> {
     this.products =  this.http.get<StandardProduct[]>('api/sp');

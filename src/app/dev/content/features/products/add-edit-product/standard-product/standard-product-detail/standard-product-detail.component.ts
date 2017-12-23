@@ -1,3 +1,4 @@
+import { StandardProduct } from '../../../../shared/models/product/standard-product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { StandardProductService } from '../standard-product.service';
 import { StandardProductSharedMethodService } from './standard-product-shared-method.service';
@@ -33,6 +34,7 @@ export class StandardProductDetailComponent implements OnInit {
   private create(): void {
 
     this.formGroup = this.formBuilder.group({
+      id: '',
       name: '',
       price: '',
       description: '',
@@ -55,17 +57,13 @@ export class StandardProductDetailComponent implements OnInit {
       country: '',
       state: '',
       city: '',
-      postcode: ''
+      postcode: '',
+      createdDate: new Date()
     });
-
-    ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'].forEach(day => this.setDefaultBussinessHoursForWeekDay(day));
   }
 
-  private setDefaultBussinessHoursForWeekDay(day: string): void {
-    this.formGroup.setControl(day, this.setTimeRangeForm(
-      [
-        { id: 1, from: { h: '09', m: '00' }, to: { h: '05', m: '00' } }
-      ]));
+  private setDefaultBussinessHoursForWeekDay(day: string, value: any): void {
+    this.formGroup.setControl(day, this.setTimeRangeForm(value));
   }
 
   private setTimeRangeForm(ranges: TimeRangePicker[]) {
@@ -73,9 +71,21 @@ export class StandardProductDetailComponent implements OnInit {
   }
 
   public save(): void {
-    this.spService.post(this.formGroup.getRawValue()).subscribe(success => {
-      this.gotoMyStore();
-    });
+
+    const sp: StandardProduct = this.formGroup.getRawValue();
+
+    if (sp.id) {
+
+      this.spService.put(sp.id, sp).subscribe(success => {
+        this.gotoMyStore();
+      });
+
+    } else {
+
+      this.spService.post(sp).subscribe(success => {
+        this.gotoMyStore();
+      });
+    }
   }
 
   public cancel(): void {
@@ -87,6 +97,12 @@ export class StandardProductDetailComponent implements OnInit {
   }
 
   public ngOnInit(): void {
+    this.route.data
+      .subscribe((data: { product: StandardProduct }) => {
+        this.formGroup.reset(data.product);
+        ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat']
+        .forEach(day => this.setDefaultBussinessHoursForWeekDay(day, data.product[day]));
+      });
   }
 }
 

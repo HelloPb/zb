@@ -2,32 +2,32 @@
   <div class="row no-gutters align-items-center">  
     <div class="col col-auto">
       <div>
-        <button mat-icon-button>
-          <mat-icon class="zb-icon" color="primary" fontSet="fa" fontIcon="fa-angle-up" aria-hidden="false" (click)="addHour(h.value)"></mat-icon>
+        <button mat-icon-button (click)="addHour(h.value)">
+          <mat-icon class="zb-icon" color="primary" fontSet="fa" fontIcon="fa-angle-up" aria-hidden="false"></mat-icon>
         </button>
       </div>
       <div class="text-center">
         <input #h formControlName="h" matInput style="width: 20px">
       </div>
       <div>
-          <button mat-icon-button>
-            <mat-icon class="zb-icon" color="primary" fontSet="fa" fontIcon="fa-angle-down" aria-hidden="false" (click)="reduceHour(h.value)"></mat-icon>
+          <button mat-icon-button (click)="reduceHour(h.value)">
+            <mat-icon class="zb-icon" color="primary" fontSet="fa" fontIcon="fa-angle-down" aria-hidden="false"></mat-icon>
           </button>
       </div>
     </div>
     <div class="col col-auto">:</div>
     <div class="col col-auto">
       <div>
-          <button mat-icon-button>
-            <mat-icon class="zb-icon" color="primary" fontSet="fa" fontIcon="fa-angle-up" aria-hidden="false" (click)="addMinute(m.value)"></mat-icon>
+          <button mat-icon-button (click)="addMinute(m.value)">
+            <mat-icon class="zb-icon" color="primary" fontSet="fa" fontIcon="fa-angle-up" aria-hidden="false"></mat-icon>
           </button>
       </div>
       <div class="text-center">
         <input #m formControlName="m" matInput style="width: 20px">
       </div>
       <div>
-          <button mat-icon-button>
-            <mat-icon class="zb-icon" color="primary" fontSet="fa" fontIcon="fa-angle-down" aria-hidden="false" (click)="reduceMinute(m.value)"></mat-icon>
+          <button mat-icon-button (click)="reduceMinute(m.value)">
+            <mat-icon class="zb-icon" color="primary" fontSet="fa" fontIcon="fa-angle-down" aria-hidden="false"></mat-icon>
           </button>
       </div>
     </div>

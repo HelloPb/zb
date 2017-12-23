@@ -1,9 +1,10 @@
+<br>
+
 <form [formGroup]="formGroup" novalidate>
   <div class="row mx-auto" style="max-width: 500px">
-
     <div class="col-12">
       <mat-form-field class="w-100">
-        <input formControlName="name" matInput maxlength="50" placeholder="Name">
+        <input formControlName="name" matInput maxlength="500" placeholder="Name">
       </mat-form-field>
     </div>
 
@@ -65,7 +66,7 @@
 
     <div class="col-12">
       <mat-form-field class="w-100">
-        <input formControlName="startDate" matInput [matDatepicker]="startDate" placeholder="Choose a start date" >
+        <input formControlName="startDate" matInput [matDatepicker]="startDate" placeholder="Choose a start date">
         <mat-datepicker-toggle matSuffix [for]="startDate"></mat-datepicker-toggle>
         <mat-datepicker touchUi="true" #startDate></mat-datepicker>
       </mat-form-field>
@@ -79,7 +80,7 @@
 
     <div class="col-12" class="w-100 h-15p"></div>
 
-    <div class="col-12" >
+    <div class="col-12">
       <mat-form-field class="w-100">
         <input formControlName="endDate" matInput [matDatepicker]="endDate" placeholder="Choose a end date">
         <mat-datepicker-toggle matSuffix [for]="endDate"></mat-datepicker-toggle>
@@ -145,6 +146,6 @@
     </div>
 
     <div class="col-12" class="w-100 h-50p"></div>
-    
-  </div>  
+
+  </div>
 </form>

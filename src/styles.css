@@ -57,10 +57,6 @@
   float: right
 }
 
-.text-center {
-  text-align: center;
-}
-
 .pb-5 {
   padding-bottom: 5px;
 }
@@ -81,6 +77,10 @@
   padding: 15px!important;
 }
 
+.pl-15 {
+  padding-left: 15px;
+}
+
 .mx-auto {
   margin: 0 auto;
 }
@@ -91,6 +91,10 @@
 
 .mr-5 {
   margin-right: 5px;
+}
+
+.ml-15 {
+  margin-left: 15px;
 }
 
 .m-5 {
@@ -271,4 +275,16 @@
 
 .fs-30p {
   font-size: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
 }
